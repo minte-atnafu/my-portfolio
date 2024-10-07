@@ -22,15 +22,8 @@ const About = () => {
                     transition={{duration:0.5}}
                     className="w-full lg:w-1/2">
                         <div className="flex justify-center lg:justify-start">
-                            <p className="my-2 max-w-xl py-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat illo,
-                                possimus laboriosam corrupti iure excepturi accusantium doloremque sunt,
-                                accusamus itaque cumque aspernatur harum dolores eveniet quibusdam explicabo minima necessitatibus,
-                                voluptatem ut illum est sapiente nemo magni!
-                                Laboriosam nam quos mollitia id ut accusamus ullam fugiat in maxime ipsa doloremque,
-                                quaerat iste ex sequi architecto dolore at? Velit blanditiis ipsa iusto porro ipsam,
-                                ratione veritatis beatae provident quidem, consequatur magnam dolore. Quo,
-                                esse quia aut sequi hic ab ipsum amet, non, aliquam voluptatum ea excepturi eaque quam atque!
-                                Tenetur sapiente neque soluta repellat voluptates at dolor omnis sequi reprehenderit pariatur.</p>
+                            <p className="my-2 max-w-xl py-6">
+Hi, I’m Mintesinot, an Electrical and Computer Engineer with experience in full-stack web development and hardware projects. I’ve worked with technologies like React, Node.js, and MongoDB, and I have hands-on experience coding microcontrollers and processors in C and assembly. I’m currently exploring machine learning to tackle complex problems and using drones to solve engineering challenges in agriculture. My unique skill is combining software and hardware to create efficient, scalable solutions. I’m always open to new collaborations, so feel free to reach out!</p>
                         </div> 
                     </motion.div>
             </div>

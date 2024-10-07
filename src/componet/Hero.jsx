@@ -30,14 +30,14 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
               className='bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent'>
-              Full Stack Developer
+              Electrical and Computer Engineer
             </motion.span>
             <motion.p
               variants={container(1)}
               initial="hidden"
               animate="visible"
               className='my-2 max-w-xl py-6 font-light'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat recusandae ipsam minus qui, nesciunt repellat sapiente magni harum eum fugiat officiis quas aliquam, alias in numquam esse facere similique! Odio sit ducimus distinctio eos minima labore culpa aperiam aspernatur repellat, cumque quam voluptates consequatur optio totam molestiae atque ex inventore!
+             I am an electrical and computer engineer with experience in developing full-stack web applications and hardware projects using microcontrollers and processors, coded in C and assembly language. I am now exploring machine language to solve more complex problems.
             </motion.p>
           </div>
         </div>

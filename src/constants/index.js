@@ -7,22 +7,22 @@ export const PROJECTS = [
         title: "Ride Sharing Web",
         image: Project1,
         description:
-            "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-        technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+            "A ride-sharing app that provides services for both riders and service providers. Users can register, place ride requests, and make payments, while service providers can accept ride requests and offer their services.",
+        technologies: ["HTML", "CSS", "tailwind","React", "Node.js", "mysql","Github"],
     },
     {
         title: "Hospital Management Web",
         image: Project2,
         description:
-            "An application for managing tasks with features such as task creation, assignment, and progress tracking.",
-        technologies: ["HTML", "CSS", "Angular", "Firebase"],
+            "Hospital management system that handles all services, from patient registration at reception to result checking and beyond.",
+        technologies: ["HTML", "CSS","tailwind", "React", "MongoDB", "Node.js","Github"],
     },
     {
         title: "API Project",
         image: Project3,
         description:
-            "An API-based application for managing projects, with features such as task creation, assignment, and progress tracking.",
-        technologies: ["Node.js", "REST API", "MongoDB"],
+            "A basic API project that performs CRUD operations and verifies requests and responses using Insomnia.",
+        technologies: ["Node.js", "REST API", "MongoDB","Insomnia"],
     },
 ];
 export const CONTACT = {
