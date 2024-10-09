@@ -1,5 +1,5 @@
 import Hero from "./componet/Hero";
-import Navbar from "./componet/navbar";
+import Navbar from "./componet/Navbar";
 import About from "./componet/About";
 import Technologies from "./componet/Technologies";
 import Project from "./componet/Project";
