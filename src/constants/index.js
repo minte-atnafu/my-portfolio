@@ -30,3 +30,6 @@ export const CONTACT = {
     PhoneNo: "+2519 73092466",
     email:"mintesinotatnafu81@gmail.com",
 };
+
+
+// we can udpdate the project area in these constants part while we doing some other new project
