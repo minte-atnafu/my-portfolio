@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Link } from 'react-scroll'; // Added react-scroll
+import { Link } from 'react-scroll';
 import logo from "../assets/mintesinotLogo.jpg";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaSun, FaMoon } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -51,15 +52,27 @@ const Navbar = () => {
                     </span>
                 </motion.div>
 
+                {/* Mobile Menu Button (Hamburger) */}
+                <div className="md:hidden flex items-center">
+                    <motion.button
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        whileTap={{ scale: 0.9 }}
+                        className="p-2 rounded-full text-gray-800 dark:text-gray-200"
+                        aria-label="Toggle menu"
+                    >
+                        {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                    </motion.button>
+                </div>
+
                 {/* Navigation Links and Social Icons */}
-                <div className="flex items-center space-x-6">
-                    {/* Navigation Links - Updated with react-scroll */}
+                <div className="hidden md:flex items-center space-x-6">
+                    {/* Desktop Navigation Links */}
                     <div className="hidden md:flex space-x-8">
                         <Link 
                             to="about" 
                             smooth={true} 
                             duration={500}
-                            offset={-80} // Adjust this if you have a fixed header height
+                            offset={-80}
                             className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors cursor-pointer"
                         >
                             About
@@ -93,7 +106,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Social Icons */}
+                    {/* Social Icons (Desktop) */}
                     <div className="flex items-center space-x-4 ml-6">
                         {socialLinks.map((link, index) => (
                             <motion.a
@@ -122,6 +135,91 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Mobile Menu (Appears when hamburger is clicked) */}
+            {mobileMenuOpen && (
+                <motion.div 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="md:hidden bg-white dark:bg-gray-900 shadow-lg rounded-lg mt-4 py-4 px-6"
+                >
+                    {/* Mobile Navigation Links */}
+                    <div className="flex flex-col space-y-4">
+                        <Link 
+                            to="about" 
+                            smooth={true} 
+                            duration={500}
+                            offset={-80}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors cursor-pointer py-2"
+                        >
+                            About
+                        </Link>
+                        <Link 
+                            to="projects" 
+                            smooth={true} 
+                            duration={500}
+                            offset={-80}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors cursor-pointer py-2"
+                        >
+                            Projects
+                        </Link>
+                        <Link 
+                            to="technologies" 
+                            smooth={true} 
+                            duration={500}
+                            offset={-80}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors cursor-pointer py-2"
+                        >
+                            Skills
+                        </Link>
+                        <Link 
+                            to="contact" 
+                            smooth={true} 
+                            duration={500}
+                            offset={-80}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors cursor-pointer py-2"
+                        >
+                            Contact
+                        </Link>
+                    </div>
+
+                    {/* Mobile Social Icons */}
+                    <div className="flex justify-center space-x-6 mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        {socialLinks.map((link, index) => (
+                            <motion.a
+                                key={index}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ y: -3 }}
+                                whileTap={{ scale: 0.9 }}
+                                className={`text-2xl ${link.color} transition-colors`}
+                            >
+                                {link.icon}
+                            </motion.a>
+                        ))}
+                    </div>
+
+                    {/* Mobile Dark Mode Toggle */}
+                    <div className="flex justify-center mt-4">
+                        <motion.button
+                            onClick={() => setDarkMode(!darkMode)}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-yellow-300"
+                            aria-label="Toggle dark mode"
+                        >
+                            {darkMode ? <FaSun /> : <FaMoon />}
+                        </motion.button>
+                    </div>
+                </motion.div>
+            )}
         </motion.nav>
     );
 };
