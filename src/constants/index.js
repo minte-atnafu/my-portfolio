@@ -1,9 +1,9 @@
-import project4 from '../assets/projects/screenshot (452).png';
-import Project1 from '../assets/projects/screenshot (455).png';
+import project4 from '../assets/projects/Screenshot (452).png';
+import Project1 from '../assets/projects/Screenshot (455).png';
 import Project2 from '../assets/projects/Project2.png';
 import Project3 from '../assets/projects/091.jpg';
-import project5 from '../assets/projects/screenshot (454).png';
-import project6 from '../assets/projects/screenshot (456).png';
+import project5 from '../assets/projects/Screenshot (454).png';
+import project6 from '../assets/projects/Screenshot (456).png';
 import project7 from '../assets/projects/OIP.webp';
 
 export const PROJECTS = [
